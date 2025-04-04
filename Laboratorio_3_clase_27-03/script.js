@@ -13,11 +13,17 @@ botonSuma.addEventListener("click", () => {
 });
 
 botonResta.addEventListener("click", () => {
-    calculo = parseInt(primero.value) - parseInt(segundo.value);
-    p.innerText = calculo;
+    let a = parseInt(primero.value);
+    let b = parseInt(segundo.value);
+    p.innerText = restar(a, b);
 });
 
 botonMulti.addEventListener("click", () => {
-    calculo = parseInt(primero.value) * parseInt(segundo.value);
-    p.innerText = calculo;
+    //calculo = parseInt(primero.value) * parseInt(segundo.value);
+    const multiplicacion = (a, b) => a * b;
+    p.innerText = multiplicacion(parseInt(primero.value), parseInt(segundo.value));
 });
+
+function restar(a, b) {
+    return a - b;
+}
